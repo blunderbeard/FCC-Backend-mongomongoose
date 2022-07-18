@@ -4,6 +4,9 @@ let mongoose = require('mongoose');
 
 let Person;
 
+const mySecret = process.env['MONGO_URI']
+mongoose.connect(mySecret);
+
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
@@ -51,6 +54,9 @@ const queryChain = (done) => {
 
   done(null /*, data*/);
 };
+
+mongoose.connect("mongodb+srv://stanthemanX01248:FhduWnw8sbmKnCfL@cluster0.2tqnp.mongodb.net/?retryWrites=true&w=majority", 
+{ useNewUrlParser: true, useUnifiedTopology: true });
 
 /** **Well Done !!**
 /* You completed these challenges, let's go celebrate !
